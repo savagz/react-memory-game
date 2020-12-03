@@ -21,10 +21,16 @@ export const Options = () => {
     return (
         <div>
             {
-                gameevent!=="START" && <button onClick={ handleStartButton } >Start</button>
+                gameevent!=="START" && 
+                <div className="box" onClick={ handleStartButton }>
+                    <button className="button">Start</button>
+                </div>
             } 
             {
-                gameevent==="START" && <button onClick={ handleResetButton } >Reset</button>
+                gameevent==="START" && 
+                <div className="box" onClick={ handleResetButton }>
+                    <button className="button">Reset</button>
+                </div> 
             } 
         </div>
     )

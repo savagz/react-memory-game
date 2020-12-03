@@ -55,6 +55,9 @@ export const Board = () => {
                     />    
                 ))
             }
+            {
+                items.length===0 && <div className="welcome"></div>
+            }
             <Score />
             <Options />
         </div>

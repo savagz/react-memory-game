@@ -4,11 +4,26 @@ import { useSelector } from 'react-redux';
 export const Score = () => {
 
     const game = useSelector( state => state.game );
-    const { score, moves } = game;
+    const { score, moves, event } = game;
 
     return (
-        <div>
-            { `Score: ${score} - Moves: ${moves}` }
-        </div>
+        <>
+            {
+                event!=="STOP" && 
+                <div>
+                    <div className="box">
+                        <div className="button">{ `Score: ${score}` }</div>
+                    </div>
+                </div>
+            } 
+            {
+                event!=="STOP" && 
+                <div>
+                    <div className="box">
+                        <div className="button">{ `Moves: ${moves}` }</div>
+                    </div>
+                </div>
+            } 
+        </>
     )
 }
